@@ -1,0 +1,27 @@
+﻿<Window x:Class="AsyncAPIs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncAPIs"
+        mc:Ignorable="d"
+        Title="AsyncAPIs" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="TextBoxCEP" Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="59" MaxLength="8"/>
+        <Button x:Name="ButtonCEPConsult" Grid.Row="1" Grid.Column="0" Content="Consulta CEP" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonCEPConsult_Click"/>
+        <TextBox x:Name="TextBoxCNPJ" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="97"/>
+        <Button x:Name="ButtonCNPJConsult" Grid.Row="1" Grid.Column="1" Content="Consulta CNPJ" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonCNPJConsult_Click"/>
+        <TextBlock x:Name="TextBlockResults" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,20,20,20" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+    </Grid>
+</Window>
